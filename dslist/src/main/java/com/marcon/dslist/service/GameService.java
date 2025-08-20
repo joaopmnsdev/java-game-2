@@ -1,8 +1,10 @@
 package com.marcon.dslist.service;
 
 import com.marcon.dslist.dto.GameDTO;
+import com.marcon.dslist.dto.GameListDTO;
 import com.marcon.dslist.dto.GameMinDTO;
 import com.marcon.dslist.entities.Game;
+import com.marcon.dslist.entities.GameList;
 import com.marcon.dslist.repository.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,5 +30,6 @@ public class GameService {
         Game result =  gameRepository.findById(id).get();
         return new GameDTO(result);
     }
+
 
 }

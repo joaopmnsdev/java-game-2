@@ -1,24 +1,20 @@
-package com.marcon.dslist.entities;
+package com.marcon.dslist.dto;
 
-import jakarta.persistence.*;
+import com.marcon.dslist.entities.GameList;
 
 import java.util.Objects;
 
-@Entity
-@Table(name = "tb_gamelist")
-public class GameList {
+public class GameListDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
-    public GameList(){
+    public GameListDTO(){
     }
 
-    public GameList(Long id, String name) {
-        this.id = id;
-        this.name = name;
+    public GameListDTO(GameList gameList) {
+        id = gameList.getId();
+        name = gameList.getName();
     }
 
     public Long getId() {
@@ -40,8 +36,8 @@ public class GameList {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        GameList gameList = (GameList) o;
-        return Objects.equals(id, gameList.id);
+        GameListDTO that = (GameListDTO) o;
+        return Objects.equals(id, that.id);
     }
 
     @Override
