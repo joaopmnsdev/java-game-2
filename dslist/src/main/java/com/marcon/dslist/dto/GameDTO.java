@@ -2,6 +2,7 @@ package com.marcon.dslist.dto;
 
 import com.fasterxml.jackson.databind.util.BeanUtil;
 import com.marcon.dslist.entities.Game;
+import com.marcon.dslist.projection.GameMinProjection;
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
